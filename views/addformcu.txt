@@ -1,0 +1,28 @@
+
+{{!-- name is the key value in object --}}
+{{!-- name of input fields have to match name of schema(document) constructor in course.js model--}}
+{{!-- <form method="post" action="/save">
+  <label for="cake name">Cake Name <br>
+  <input type="text" name="name" >
+  </label>
+
+  <h5>Ingredients</h5>
+  {{!-- name of input have to match name of course scheme in database --}}
+  <label for="eggs">Eggs: piece<br></label><br>
+  <input type="number" name="eggs" id = "eggs"><br><br>
+
+  <label for="flour">Flour: gram</label><br>
+  <input type="number" name="flour" id="flour"><br><br>
+  
+  <label for="steps">Steps: </label><br>
+  {{!-- <input type="text" name="steps" id="steps"><br><br>
+   --}}
+  <textarea id="steps" rows="3" name="steps"></textarea>
+  <br>
+  
+  <label for="img">Image:<br></label>
+  <input type="text" name="image" id="img"><br><br>
+  
+
+  <input type="submit" value="Submit">
+</form>  --}}

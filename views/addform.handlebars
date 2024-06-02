@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add new Recipe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/addform.css">
+  <style></style>
+
+</head>
+
+<body>
+  <div class="container">
+  <div class="mx-3 px-6 py-8 ">
+    <h2 class="title">I have a new successful recipe</h2>
+    
+    <div>
+      <form style="width: 30rem;" method="post" action="/save" class="formdiv px-5 py-5">
+      <!-- Name input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example1">This recipe is named: </label>
+        <input type="text" id="form4Example1" class="form-control" name="name"/>
+      </div>
+
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example2">Time needed: </label>
+        <input type="number" id="form4Example2" class="form-control" placeholder="How much Time will be needed: " name="time"/>
+      </div>
+
+      <!-- Taste input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example3">Taste: </label>
+        <input type="text" id="form4Example3" class="form-control" placeholder="How it tastes" name="taste"/>
+      </div>
+
+       <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example4">Ingredients</label>
+        <textarea class="form-control" id="form4Example4" rows="4" placeholder="Eggs, Flour,..." name="ingre"></textarea>
+      </div>
+
+      <!-- Message input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example5">Steps</label>
+        <textarea class="form-control" id="form4Example5" rows="4" placeholder="Steps" name="steps"></textarea>
+      </div>
+
+      <!-- Taste input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <label class="form-label" for="form4Example6">Image url</label>
+        <input type="text" id="form4Example6" class="form-control" placeholder="https://image.jpg" name="img"/>
+      </div>
+
+      <!-- Submit button -->
+      <button data-mdb-ripple-init type="submit" value="submit" class="btn btn-primary btn-block mb-4 savebutt">Save</button>
+    </form>
+    </div>
+    
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
+
+

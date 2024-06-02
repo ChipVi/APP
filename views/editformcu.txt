@@ -1,0 +1,22 @@
+
+<form method="post" action="/edit/{{cakes.slug}}/save">
+  <label for="cake name">Cake Name</label><br>
+  <input type="text" name="editname" value="{{cakes.name}}"><br>
+
+  
+  <h5>Ingredients</h5>
+
+  <label for="ingre">Eggs: piece
+  <input type="number" name="eggs">
+  </label>
+
+  <label for="ingre">Flour: gram<br>
+  <input type="number" name="flour"><br><br>
+  </label>
+
+  <label for="ingre">Image:<br>
+  <input type="text" name="ingredients"><br><br>
+  </label>
+
+  <input type="submit" value="Save Update">
+</form> 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{!-- <title>Bootstrap Example</title> --}}
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/navbar.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+   {{!-- <link rel="stylesheet" href="assets/css/style.css"> --}}
+
+</head>
+<body>
+    
+     <header>
+      <div>
+          <div class="header-dark">
+              <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                  <div class="container"><a class="navbar-brand" href="/">My Recipe Book</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                      <div class="collapse navbar-collapse"
+                          id="navcol-1">
+                          <ul class="nav navbar-nav">
+                              <li class="nav-item" role="presentation"><a class="nav-link" href="/add">Add new recipe</a></li>
+                          </ul>
+                          {{!-- <form class="form-inline mr-auto" target="_self"> --}}
+                          {{!-- <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" name="search" id="search-field"></div> --}}
+                      </div>
+                  </div>
+              </nav>
+              <div class="container hero">
+                  <div class="row">
+                      <div class="col-md-8 offset-md-2">
+                          <h1 class="text-center">What will you bake today?</h1>
+                          {{!-- <div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item"><img src="logo.png"></iframe></div> --}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+     </header>
+
+    <container>
+      {{{body}}}
+    </container>
+    
+    <footer>
+    {{!-- <div class="container my-5"> --}}
+      <footer class="text-center text-white" style="background: url('/header.jpg');">
+      <!-- Grid container -->
+      <div class="container pt-4">
+        <!-- Section: Social media -->
+        <section class="mb-4">
+          <!-- Facebook -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="facebook.com"
+            role="button"
+            data-mdb-ripple-color="dark"
+            >Facebook</a>
+
+          <!-- Twitter -->
+          
+
+          <!-- Instagram -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="/instagram.com"
+            role="button"
+            data-mdb-ripple-color="dark"
+            >Instagram</a>
+
+          
+          <!-- Github -->
+          <a
+            class="btn btn-link btn-floating btn-lg text-dark m-1"
+            href="https://github.com/ChipVi"
+            role="button"
+            data-mdb-ripple-color="dark"
+            {{!-- ><i class="fab fa-linkedin"></i> --}}
+            >GitHub</a>
+        </section>
+        <!-- Section: Social media -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center text-dark p-3" style="background-color: rgba(253, 159, 37, 0.2); font-weight: bold;">
+        © 2024 Copyright: Nguyen Khanh Vi. See full code source on my GitHub
+      </div>
+      <!-- Copyright -->
+    </footer>
+      
+
+    <!-- End of .container -->
+    </footer>
+  
+</div>
+
+   
+
+<!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>

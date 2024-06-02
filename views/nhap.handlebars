@@ -1,0 +1,36 @@
+{{#each cake}}
+    <a href="/read/{{this.slug}}">
+        <h1>{{this.name}}</h1>
+    </a>
+    <a href="/edit/{{this.slug}}">
+        <button>EDIT recipe</button>
+    </a>
+    
+    <button  type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-id="{{this._id}} ">THROW AWAY</button>
+    
+   
+    <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Do you want to throw away {{this.name}} recipe?</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body"></div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+
+                {{!-- we can not use tag <a href=""></a> here, because, href send a get request to the server, not a delete req. --}}
+                <form name="deleteform" method="POST"> 
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button id="sure" type="submit" class="btn btn-primary">Yes it sucks</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+{{/each}}

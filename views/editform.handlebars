@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Recipe</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/editform.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+  <style></style>
+
+</head>
+<body>
+  
+  <div class="container card2">
+    <div id="notification">
+        Data has been updated successfully!
+    </div>
+    <div class="card">
+            <div class="container-fluid">
+              <div class="wrapper row ">
+                {{!-- cot anh ben trai --}}
+                <div class="preview col-md-6">
+                  
+                  <div class="preview-pic tab-content">
+                    <div class="tab-pane active mt-5 " id="pic-1"><img src="{{cakes.img}}" /></div>
+                  </div>
+                  
+                </div>
+                {{!-- cot info ben phai --}}
+                  <div class="details col-md-6 position-relative">
+                  <div class="mx-3 px-3 py-4 formdiv">
+                  <h3 class="text-center" style="color: #696f53">Edit to recipe</h3>
+                  <h2 class="text-center" style="color: #696f53"><strong>{{cakes.name}}</strong></h2>
+                  
+                  <div>
+                    {{!-- <form style="width: 28rem;" method="post" action="/edit/{{cakes._id}}/save" class="form"> --}}
+                    <form style="width: 28rem;" method="post" action="/edit/{{cakes._id}}" class="form">
+
+
+                    <input type="hidden" id="form4Example1" class="form-control" name="id" value="{{cakes._id}}"/>
+                    
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example1"><h4 class="mb-0">New name:</h4> </label>
+                      <input type="text" id="form4Example1" class="form-control" name="name" value="{{cakes.name}}"/>
+                    </div>
+                    
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example2"><h4 class="mb-0">Time needed: </h4></label>
+                      <input type="number" id="form4Example2" class="form-control" placeholder= "{{cakes.time}}" name="time" value="{{cakes.time}}"/>
+                    </div>
+
+                    <!-- Taste input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example3"><h4 class="mb-0">Taste: </h4></label>
+                      <input type="text" id="form4Example3" class="form-control" placeholder="{{cakes.taste}}" name="taste" value="{{cakes.taste}}"/>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example4"><h4 class="mb-0">Ingredients</h4></label>
+                      <textarea class="form-control" id="form4Example4" rows="4" placeholder="{{cakes.ingre}}" name="ingre" value="{{cakes.ingre}}"></textarea>
+                    </div>
+
+                    <!-- Message input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example5"><h4 class="mb-0">Steps</h4></label>
+                      <textarea class="form-control" id="form4Example5" rows="4" placeholder="{{cakes.steps}}" name="steps" value="{{cakes.steps}}"></textarea>
+                    </div>
+
+                    <!-- Taste input -->
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <label class="form-label" for="form4Example6"><h4 class="mb-0">Image url</h4></label>
+                      <input type="text" id="form4Example6" class="form-control" placeholder="{{cakes.img}}" name="img" value="{{cakes.img}}"/>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button  type="submit" value="submit" id="updateButton" data-id="{{cakes._id}}" class="btn btn-primary mb-3 mt-4 maunut" >Save Update</button>
+                    <div id="id" value="{{cakes._id}}"></div>
+                  </form>
+                  </div>
+                  
+                      </div>
+                  </div>
+              </div>
+            </div>
+    </div>
+  </div>
+  
+   </body> 
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    
+            $('#updateButton').on('click', function() {
+              var button= $('#updateButton');
+              var id=$('#id').value;
+                $.ajax({
+                    url: '/edit/' + id,
+                    method: 'POST',
+                    success: function(response) {
+                          if (response.success) {
+                            $('#notification').fadeIn().delay(2000).fadeOut(); 
+                        }
+                    }
+                });
+            });
+        
+  </script>
+  {{!-- <script>
+    function myfunction(){
+      alert("alert success");
+    }
+  </script> --}}
+</html>
+
+

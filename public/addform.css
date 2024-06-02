@@ -1,0 +1,18 @@
+.formdiv{
+    background-color: blanchedalmond;
+    margin: 0 auto;
+   
+    /* align-items: center; */
+}
+.title{
+    margin: 2em auto 0;
+    text-align: center;
+}
+
+.savebutt{
+    background-color: brown;
+    border: none;
+}
+.savebutt:hover{
+    background-color: burlywood;
+}
