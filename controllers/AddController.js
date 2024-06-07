@@ -11,7 +11,8 @@ class AddController{
         // res.send(req.body.cakename);
         const newcake = new cakeModel(req.body);
         newcake.save();
-        res.redirect('/');
+        res.render('save');
+        
         // them thong bao thanh cong
         
     }

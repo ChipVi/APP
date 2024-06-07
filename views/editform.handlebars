@@ -52,32 +52,29 @@
                       <input type="number" id="form4Example2" class="form-control" placeholder= "{{cakes.time}}" name="time" value="{{cakes.time}}"/>
                     </div>
 
-                    <!-- Taste input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                       <label class="form-label" for="form4Example3"><h4 class="mb-0">Taste: </h4></label>
-                      <input type="text" id="form4Example3" class="form-control" placeholder="{{cakes.taste}}" name="taste" value="{{cakes.taste}}"/>
+                      <input type="text" id="form4Example3" class="form-control"  name="taste" value="{{cakes.taste}}"/>
                     </div>
 
                     <div data-mdb-input-init class="form-outline mb-4">
                       <label class="form-label" for="form4Example4"><h4 class="mb-0">Ingredients</h4></label>
-                      <textarea class="form-control" id="form4Example4" rows="4" placeholder="{{cakes.ingre}}" name="ingre" value="{{cakes.ingre}}"></textarea>
+                      {{!-- <input type="text" id="form4Example4" placeholder="{{cakes.ingre}}" name="ingre" value="{{cakes.ingre}}"/> --}}
+                      <textarea class="form-control" id="form4Example4" rows="4"  name="ingre">{{cakes.ingre}}</textarea>
                     </div>
 
-                    <!-- Message input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                       <label class="form-label" for="form4Example5"><h4 class="mb-0">Steps</h4></label>
-                      <textarea class="form-control" id="form4Example5" rows="4" placeholder="{{cakes.steps}}" name="steps" value="{{cakes.steps}}"></textarea>
+                      <textarea class="form-control" id="form4Example5" rows="4" placeholder="{{cakes.steps}}" name="steps">{{cakes.steps}}</textarea>
                     </div>
 
-                    <!-- Taste input -->
                     <div data-mdb-input-init class="form-outline mb-4">
                       <label class="form-label" for="form4Example6"><h4 class="mb-0">Image url</h4></label>
                       <input type="text" id="form4Example6" class="form-control" placeholder="{{cakes.img}}" name="img" value="{{cakes.img}}"/>
                     </div>
 
                     <!-- Submit button -->
-                    <button  type="submit" value="submit" id="updateButton" data-id="{{cakes._id}}" class="btn btn-primary mb-3 mt-4 maunut" >Save Update</button>
-                    <div id="id" value="{{cakes._id}}"></div>
+                    <button  type="submit" value="submit" id="updateButton" class="btn btn-primary mb-3 mt-4 maunut" >Save Update</button>
                   </form>
                   </div>
                   
@@ -92,8 +89,7 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script>
-    
+  {{!-- <script>
             $('#updateButton').on('click', function() {
               var button= $('#updateButton');
               var id=$('#id').value;
@@ -107,13 +103,32 @@
                     }
                 });
             });
-        
-  </script>
+  </script> --}}
   {{!-- <script>
     function myfunction(){
       alert("alert success");
     }
   </script> --}}
+  
+  {{!-- <script>
+    var id= document.getElementById('form4Example1').value;
+    document.getElementById('updateButton').addEventListener('click', function() {
+      fetch('http://localhost:3000/edit/665f61d63cb2df2ace01b16e',{
+        method: 'post'
+      })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        alert("Update some thing successfully");
+      })
+      .catch(er=>{
+        console.log(er);
+      })
+    });
+    
+  </script> --}}
+
 </html>
+
 
 

@@ -12,17 +12,16 @@ class DelController{
         .then(found => {
             if (found) {
                 console.log(found);
+                // res.redirect('/');
+                res.render('del', {found});
             }
-            else console.log('No cake found with that name.');
+            else {
+                res.render('alreadydel');
+            };
         })
         .catch(err => {
             console.error(err);
         });
-        // res.redirect('back');
-       
-
-    // Send a response
-            // res.send(`ID: ${id}`);
     }
 
 }

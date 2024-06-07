@@ -15,25 +15,26 @@ class EditController{
 
     save(req, res){
         // when we receive data from form, the data is saved in req.body, not req.params
+        const id = req.body.id;
                     cakeModel.updateOne({_id: req.body.id}, 
                                         {name: req.body.name,
+                                        time: req.body.time,
+                                        taste: req.body.taste,
                                         ingre: req.body.ingre,
                                         steps: req.body.steps,
                                         img: req.body.img,
-                                        taste: req.body.taste,
-                                        slug: req.body.slug
                                         })
-                    .then(result => console.log('Cake updated:', result))
-                    .catch(err => console.error('Error updating cake:', err));
+                    .then(result => {
+                        console.log('Cake updated:', id);
+                        res.render('save', {ido: id});
+                        // res.redirect('/read/' + id);
+                        // res.json({ok: true});
+                    })
+                    .catch(err => {
+                        console.error('Error updating cake:', err);
+                        res.send('404 ERROR');
+                    });
                 
-                // const link= '/read/' + req.body._id;
-
-                // res.send('update successfully');
-                // res.redirect('back');
-                // res.status(204).send();
-                res.json({ success: true });
-                
-
     }
 }
 

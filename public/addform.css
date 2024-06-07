@@ -10,8 +10,9 @@
 }
 
 .savebutt{
-    background-color: brown;
+    background-color: #a3ab87;
     border: none;
+    height: 3rem;
 }
 .savebutt:hover{
     background-color: burlywood;

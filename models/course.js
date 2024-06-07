@@ -9,14 +9,11 @@ mongoose.plugin(slug);
 // Schema is a mould to create new documents in mongo
 const cake = new Schema({
   name: String,
+  time: Number,
+  taste: String,
   ingre: String,
   steps: String,
   img: String,
-  time: Number,
-  taste: String,
-  // slug: {type: String, default: function() {
-  //   return this.name;
-  // }}
 });
 
 // model is interface to access to the db

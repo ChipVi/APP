@@ -31,10 +31,12 @@ img{
     justify-content: center;
     background-color: burlywood;
     border: none;
+    text-decoration: none;
 }
 .addbutt:hover{
-    background-color: brown;
+    background-color: #a3ab87;
     border: none;
+    text-decoration: none;
 }
 
 
